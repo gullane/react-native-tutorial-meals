@@ -10,6 +10,9 @@ npm install redux react-redux
 
 click r twice on android
 cmd R on ios
+
+JS Debugging  = (open development overlay via CTRL + M / CMD + M on Android devices, CMD + D
+
 */
 import React, { useState } from "react";
 import * as Font from 'expo-font'
@@ -27,7 +30,12 @@ useScreens()
 const rootReducer = combineReducers({
     meals: mealsReducer
 })
+/*
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
+const store = createStore(reducer, composeWithDevTools());
+*/
 const store = createStore(rootReducer)
 
 const fetchFonts = () => {
